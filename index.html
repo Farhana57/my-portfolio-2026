@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farhana Khatun | Creative Full-Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+       <div id="cursor" class="fixed w-8 h-8 border-2 border-yellow-500 rounded-full pointer-events-none z-[9999] transition-transform duration-100 ease-out hidden md:block"></div>
+<div id="cursor-dot" class="fixed w-1.5 h-1.5 bg-white rounded-full pointer-events-none z-[9999] hidden md:block"></div>
+<div class="fixed bottom-8 right-8 z-[200] flex flex-col items-center gap-4">
+    <div id="fab-options" class="flex flex-col gap-3 mb-2 scale-0 opacity-0 transition-all duration-300 origin-bottom">
+        <a href="#home" class="w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-yellow-500 transition-all shadow-lg border border-white/10" title="Home"><i class="fas fa-home"></i></a>
+        <a href="#about" class="w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-yellow-500 transition-all shadow-lg border border-white/10" title="About"><i class="fas fa-user"></i></a>
+        <a href="#work" class="w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-yellow-500 transition-all shadow-lg border border-white/10" title="Work"><i class="fas fa-briefcase"></i></a>
+        <a href="#contact" class="w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-yellow-500 transition-all shadow-lg border border-white/10" title="Contact"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <button id="fab-main" class="w-14 h-14 bg-gradient-to-r from-[#BF953F] to-[#AA771C] rounded-full flex items-center justify-center text-black text-2xl shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-transform duration-300 active:scale-90">
+        <i class="fas fa-plus transition-transform duration-300" id="fab-icon"></i>
+    </button>
+</div>
+    <nav id="navbar" class="fixed w-full z-[100] px-6 py-4 transition-all duration-300">
+    <div class="max-w-4xl mx-auto flex justify-between items-center">
+        <div class="text-1xl font-black tracking-tighter italic">
+            <span class="gold-gradient">FAR</span><span class="text-white">HANA</span>
+        </div>
+
+        <div class="hidden md:flex gap-8 text-[11px] uppercase tracking-widest font-bold items-center">
+            <a href="#home" class="hover:text-yellow-500 transition text-white">Home</a>
+            <a href="#about" class="hover:text-yellow-500 transition text-white">About</a>
+            <a href="#skills" class="hover:text-yellow-500 transition text-white">Skills</a>
+            <a href="#work" class="hover:text-yellow-500 transition text-white">Work</a>
+            
+            <a href="#contact" class="px-6 py-2 border border-[#D4AF37] rounded-full text-[#D4AF37] hover:bg-gradient-to-r hover:from-[#BF953F] hover:to-[#FCF6BA] hover:text-black hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all duration-300 font-black">
+                Contact
+            </a>
+        </div>
+
+        <button id="menu-btn" class="md:hidden text-white p-2 focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-black/95 backdrop-blur-xl hidden flex-col items-center justify-center gap-8 z-[150]">
+        <button id="close-btn" class="absolute top-6 right-6 text-white text-4xl">&times;</button>
+        <a href="#home" class="mobile-link text-2xl font-bold text-white hover:text-yellow-500">Home</a>
+        <a href="#about" class="mobile-link text-2xl font-bold text-white hover:text-yellow-500">About</a>
+        <a href="#skills" class="mobile-link text-2xl font-bold text-white hover:text-yellow-500">Skills</a>
+        <a href="#work" class="mobile-link text-2xl font-bold text-white hover:text-yellow-500">Work</a>
+        <a href="#contact" class="mobile-link text-2xl font-black gold-gradient border border-[#D4AF37] px-10 py-3 rounded-full">Contact</a>
+    </div>
+</nav>
+      <section id="home" class="h-screen flex flex-col justify-center items-center relative px-6 text-center">
+        <div class="absolute w-96 h-96 bg-indigo-600/10 rounded-full blur-[120px] -z-10"></div>
+        
+        <h2 class="text-blue-400 font-mono tracking-[0.3em] mb-4 uppercase text-sm" data-aos="fade-down">
+            Creative Front-End Developer
+        </h2>
+
+        <h1 class="text-3xl md:text-8xl font-black leading-tight" data-aos="zoom-in">
+            FARHANA <br> <span class="gold-gradient" id="typed"></span>
+        </h1>
+
+        <p class="mt-8 text-gray-400 text-lg max-w-2xl" data-aos="fade-up">
+            COO at <span class="text-white font-bold">uptotechsyl.com</span>. Specialized in building high-performance, pixel-perfect user interfaces and digital experiences.
+        </p>
+
+        <a href="#work" class="mt-12 group relative inline-flex items-center px-12 py-4 overflow-hidden border-2 border-[#D4AF37] rounded-full transition-all shadow-[0_0_15px_rgba(212,175,55,0.1)] hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]">
+            <span class="relative font-bold uppercase tracking-widest text-[#D4AF37] group-hover:text-black z-10 transition-colors duration-300">
+                Explore Work
+            </span>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] -z-10 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+        </a>
+    </section>
+    <section id="about" class="py-32 px-10 max-w-7xl mx-auto">
+       
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+        <div class="relative flex justify-center" data-aos="fade-right">
+            <div class="relative">
+                <img src="mypic.jpeg" alt="Farhana" class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full grayscale hover:grayscale-0 transition duration-700 border-4 border-[#D4AF37]/30 shadow-[0_0_50px_rgba(212,175,55,0.2)]">
+                <div class="absolute inset-0 rounded-full border-2 border-dashed border-[#D4AF37]/50 animate-[spin_10s_linear_infinite] -z-10 scale-110"></div>
+            </div>
+            <div class="absolute -bottom-6 -right-0 md:-right-4 glass-card p-6 rounded-2xl border border-[#D4AF37]/20 shadow-xl">
+                  <h3 class="text-3xl font-bold gold-gradient text-center">10+</h3>
+<p class="text-[10px] uppercase tracking-[0.2em] text-gray-400 text-center">Successful Projects</p>
+            </div>
+        </div>
+
+        <div data-aos="fade-left">
+            <h3 class="text-blue-500 font-bold mb-4 tracking-tighter uppercase text-sm">// Who I Am</h3>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 italic leading-tight text-white">
+                Building digital products, brands, and experiences.
+            </h2>
+            <p class="text-gray-400 leading-relaxed text-lg mb-8">
+                Based in Sylhet, Bangladesh, I specialize in creating high-end digital solutions. My role as <span class="text-white font-bold">COO at UpToTechSyl</span> allows me to bridge the gap between complex code and elegant UI.
+            </p>
+            <div class="flex gap-10 border-t border-white/5 pt-8">
+                <div>
+                    <h4 class="text-3xl font-bold text-white">15+</h4>
+                    <p class="text-gray-500 text-xs uppercase tracking-widest">Projects</p>
+                </div>
+                <div>
+                    <h4 class="text-3xl font-bold text-white">∞</h4>
+                    <p class="text-gray-500 text-xs uppercase tracking-widest">Coffee</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <section id="skills" class="py-32 bg-[#080808] px-10">
+    <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-5xl font-bold mb-20">My <span class="gold-gradient">Arsenal</span></h2>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            
+            <div class="glass-card p-10 rounded-2xl flex flex-col items-center justify-center border border-white/5 hover:border-cyan-400/50 transition-all duration-500 group shadow-[0_0_20px_rgba(34,211,238,0.1)]" data-aos="flip-left">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" class="h-16 mb-4 group-hover:rotate-[360deg] transition-transform duration-[2000ms]">
+                <p class="font-bold tracking-widest text-sm uppercase text-cyan-400">React.js</p>
+            </div>
+
+            <div class="glass-card p-10 rounded-2xl flex flex-col items-center justify-center border border-white/5 hover:border-yellow-400/50 transition-all duration-500 group" data-aos="flip-left" data-aos-delay="100">
+                <img src="https://cdn.worldvectorlogo.com/logos/logo-javascript.svg" class="h-16 mb-4 group-hover:scale-110 transition-transform">
+                <p class="font-bold tracking-widest text-sm uppercase">JavaScript</p>
+            </div>
+
+            <div class="glass-card p-10 rounded-2xl flex flex-col items-center justify-center border border-white/5 hover:border-green-500/50 transition-all duration-500 group" data-aos="flip-left" data-aos-delay="200">
+                <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" class="h-16 mb-4 group-hover:scale-110 transition-transform">
+                <p class="font-bold tracking-widest text-sm uppercase">Node.js</p>
+            </div>
+
+            <div class="glass-card p-10 rounded-2xl flex flex-col items-center justify-center border border-white/5 hover:border-green-400/50 transition-all duration-500 group" data-aos="flip-left" data-aos-delay="300">
+                <img src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" class="h-16 mb-4 group-hover:scale-110 transition-transform">
+                <p class="font-bold tracking-widest text-sm uppercase">MongoDB</p>
+            </div>
+
+            <div class="glass-card p-10 rounded-2xl flex flex-col items-center justify-center border border-white/5 hover:border-blue-400/50 transition-all duration-500 group" data-aos="flip-left" data-aos-delay="400">
+                <img src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" class="h-16 mb-4 group-hover:scale-110 transition-transform">
+                <p class="font-bold tracking-widest text-sm uppercase">Tailwind</p>
+            </div>
+
+            <div class="glass-card p-10 rounded-2xl flex flex-col items-center justify-center border border-white/5 hover:border-purple-600/50 transition-all duration-500 group" data-aos="flip-left" data-aos-delay="500">
+                <img src="https://cdn.worldvectorlogo.com/logos/bootstrap-4.svg" class="h-16 mb-4 group-hover:scale-110 transition-transform">
+                <p class="font-bold tracking-widest text-sm uppercase">Bootstrap</p>
+            </div>
+
+            <div class="glass-card p-10 rounded-2xl flex flex-col items-center justify-center border border-white/5 hover:border-orange-500/50 transition-all duration-500 group" data-aos="flip-left" data-aos-delay="600">
+                <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" class="h-16 mb-4 group-hover:scale-110 transition-transform">
+                <p class="font-bold tracking-widest text-sm uppercase">HTML5</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <section id="work" class="py-32 px-10 max-w-7xl mx-auto overflow-hidden">
+    <h2 class="text-4xl font-bold mb-16 text-center italic">Selected <span class="gold-gradient">Works</span></h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 perspective-1200">  
+        <div class="group relative overflow-hidden rounded-3xl glass-card border border-white/10 card-3d-effect" data-aos="zoom-in-up">
+            <img src="work.jpeg" class="w-full h-80 object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90"></div>
+            <div class="absolute bottom-8 left-8">
+                <p class="text-pink-400 font-mono text-xs mb-2 tracking-widest uppercase">WEB APPLICATION</p>
+                <h3 class="text-2xl font-bold text-white">Aaryan Sourcing System</h3>
+                <div class="flex gap-2 mt-4">
+                    <span class="tag-pink">React</span>
+                    <span class="tag-white">Node.js</span>
+                </div>
+            </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-3xl glass-card border border-white/10 card-3d-effect" data-aos="zoom-in-up" data-aos-delay="100">
+            <img src="ui.webp" class="w-full h-80 object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90"></div>
+            <div class="absolute bottom-8 left-8">
+                <p class="text-pink-400 font-mono text-xs mb-2 tracking-widest uppercase">UI DESIGN</p>
+                <h3 class="text-2xl font-bold text-white">Aaryan Dashboard UI</h3>
+                <div class="flex gap-2 mt-4">
+                    <span class="tag-pink">Figma</span>
+                    <span class="tag-white">Tailwind</span>
+                </div>
+            </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-3xl glass-card border border-white/10 card-3d-effect" data-aos="zoom-in-up" data-aos-delay="200">
+            <img src="ui1.webp" class="w-full h-80 object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90"></div>
+            <div class="absolute bottom-8 left-8">
+                <p class="text-white-500 font-mono text-xs mb-2 tracking-widest uppercase">WEB APPLICATION</p>
+                <h3 class="text-2xl font-bold text-white">System Architecture</h3>
+                <div class="flex gap-2 mt-4">
+                    <span class="tag-pink">React</span>
+                    <span class="tag-white">Express</span>
+                </div>
+            </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-3xl glass-card border border-white/10 card-3d-effect" data-aos="zoom-in-up" data-aos-delay="300">
+            <video src="my wvedio.mp4" autoplay muted loop playsinline class="w-full h-80 object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-1000"></video>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80"></div>
+            <div class="absolute bottom-8 left-8">
+                <p class="text-[#FFD700] font-mono text-xs mb-2 tracking-widest uppercase">UI/UX SHOWCASE</p>
+                <h3 class="text-2xl font-bold text-white">Premium Landing Page</h3>
+                <div class="flex gap-2 mt-4">
+                    <span class="tag-pink">Next.js</span>
+                    <span class="tag-gold">Framer Motion</span>
+                </div>
+            </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-3xl glass-card border border-white/10 card-3d-effect" data-aos="zoom-in-up" data-aos-delay="400">
+            <video src="vedio2.mp4" autoplay muted loop playsinline class="w-full h-80 object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-1000"></video>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80"></div>
+            <div class="absolute bottom-8 left-8">
+                <p class="text-[#FFD700] font-mono text-xs mb-2 tracking-widest uppercase">ECOMMERCE</p>
+                <h3 class="text-2xl font-bold text-white">Modern Marketplace</h3>
+                <div class="flex gap-2 mt-4">
+                    <span class="tag-pink">MongoDB</span>
+                    <span class="tag-white">Tailwind</span>
+                </div>
+            </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-3xl glass-card border border-white/10 p-8 flex flex-col justify-end min-h-[320px] card-3d-effect" data-aos="zoom-in-up" data-aos-delay="500">
+            <div class="relative z-10">
+                <p class="text-pink-400 font-mono text-sm mb-2 uppercase">Featured Project</p>
+                <h3 class="text-3xl font-bold text-white mb-6">Let's Build Something <br>Grand</h3>
+                <div class="flex gap-4">
+                    <a href="#" class="bg-gradient-to-r from-pink-600 to-orange-500 hover:scale-105 px-6 py-3 rounded-xl text-sm font-bold transition-all">Live Preview</a>
+                    <a href="#" class="border border-white/20 hover:bg-white/10 px-6 py-3 rounded-xl text-sm font-bold transition-all text-white">GitHub</a>
+                </div>
+            </div>
+            <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-pink-600/20 blur-[100px] rounded-full"></div>
+        </div>
+    </div>
+</section>
+<section class="py-32 px-10 max-w-7xl mx-auto">
+    <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-extrabold italic uppercase tracking-tighter">My Working <span class="gold-gradient">Process</span></h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="glass-card p-8 rounded-3xl relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+            <span class="text-6xl font-black opacity-10 absolute -right-2 -top-2">01</span>
+            <h3 class="text-xl font-bold mb-4 gold-gradient">Discovery</h3>
+            <p class="text-gray-400 text-sm">Understanding your goals, target audience, and project requirements to build a solid foundation.</p>
+        </div>
+        <div class="glass-card p-8 rounded-3xl relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+            <span class="text-6xl font-black opacity-10 absolute -right-2 -top-2">02</span>
+            <h3 class="text-xl font-bold mb-4 gold-gradient">Strategy</h3>
+            <p class="text-gray-400 text-sm">Mapping out the user flow, wireframes, and choosing the right tech stack (Node.js/MongoDB).</p>
+        </div>
+        <div class="glass-card p-8 rounded-3xl relative overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+            <span class="text-6xl font-black opacity-10 absolute -right-2 -top-2">03</span>
+            <h3 class="text-xl font-bold mb-4 gold-gradient">Development</h3>
+            <p class="text-gray-400 text-sm">Turning designs into pixel-perfect, responsive, and functional code with clean architecture.</p>
+        </div>
+        <div class="glass-card p-8 rounded-3xl relative overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+            <span class="text-6xl font-black opacity-10 absolute -right-2 -top-2">04</span>
+            <h3 class="text-xl font-bold mb-4 gold-gradient">Deployment</h3>
+            <p class="text-gray-400 text-sm">Rigorous testing followed by a smooth launch and 24/7 post-launch support.</p>
+        </div>
+    </div>
+</section>
+<section class="py-20 bg-[#080808]">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+        <h3 class="text-blue-500 font-bold mb-4">// TESTIMONIALS</h3>
+        <div class="glass-card p-12 rounded-3xl italic text-xl md:text-2xl text-gray-300" data-aos="zoom-in">
+            "Farhana is an exceptional leader and developer. Her ability to coordinate complex projects at UpToTechSyl is truly commendable. The pixel-perfect design she delivered exceeded our expectations."
+            <div class="mt-8 not-italic flex flex-col items-center">
+                <div class="w-12 h-12 bg-gold-text rounded-full mb-4"></div>
+                <p class="text-white font-bold text-lg">Director, UpToTechSyl</p>
+                <p class="text-blue-500 text-sm">Official Client</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="contact" class="py-32 px-10 max-w-4xl mx-auto text-center">
+        <h2 class="text-5xl font-bold mb-16">Let's <span class="gold-gradient">Connect</span></h2>
+        <form id="contact-form" class="glass-card p-10 rounded-3xl space-y-6 text-left" data-aos="fade-up">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input type="text" name="name" placeholder="Full Name" class="bg-white/5 border-b border-white/10 p-4 focus:border-yellow-500 outline-none transition" required>
+                <input type="email" name="email" placeholder="Email Address" class="bg-white/5 border-b border-white/10 p-4 focus:border-yellow-500 outline-none transition" required>
+            </div>
+            <textarea name="message" placeholder="Message" rows="4" class="w-full bg-white/5 border-b border-white/10 p-4 focus:border-yellow-500 outline-none transition" required></textarea>
+            <button type="submit" class="w-full bg-gradient-to-r from-[#BF953F] to-[#AA771C] py-4 rounded-xl font-bold text-black hover:scale-[1.02] transition-all tracking-widest uppercase shadow-lg">
+    Send Message
+</button>
+        </form>
+    </section>
+
+    <footer class="py-20 text-center border-t border-white/5">
+        <div class="flex justify-center gap-10 mb-8">
+            <a href="#" class="text-2xl hover:text-yellow-500"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-2xl hover:text-yellow-500"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/01759945057" class="text-2xl hover:text-green-500"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p class="text-gray-600">&copy; 2026 FARHANA KHATUN. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

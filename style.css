@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Poppins:wght@300;400;600&display=swap');
+        
+        body { background: #030014;
+             color: #fff;
+              font-family: 'Poppins', sans-serif; 
+              overflow-x: hidden;
+               scroll-behavior: smooth; }
+        h1, h2, h3, .gold-gradient { font-family: 'Syne', sans-serif; }
+        
+        .gold-gradient {
+            background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(191, 149, 63, 0.4);
+            transform: translateY(-10px);
+        }
+
+        .tag-pink { @apply px-3 py-1 bg-pink-500/10 text-pink-500 rounded-full text-[10px] font-bold uppercase; }
+        .tag-white { @apply px-3 py-1 bg-white/10 text-white rounded-full text-[10px] font-bold uppercase; }
+        
+        /* Navbar Blur Effect */
+        #navbar.scrolled { 
+            background: rgba(3, 0, 20, 0.8);
+             border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+             /* কার্সার স্টাইল */
+    #cursor {
+        box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+        mix-blend-mode: difference; /* এটি যেকোনো কালারের ওপর ফুটে উঠবে */
+    }
+    .perspective-1200 { perspective: 1200px; }
+.card-3d-effect {
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+.card-3d-effect:hover {
+    transform: rotateY(10deg) rotateX(5deg);
+    box-shadow: 0 25px 50px -12px rgba(212, 175, 55, 0.3);
+}
+.card-3d-effect {
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+.card-3d-effect:hover {
+    transform: perspective(1000px) rotateY(10deg) rotateX(5deg) scale(1.02);
+    box-shadow: 0 30px 60px rgba(212, 175, 55, 0.2);
+}
+/* এটি আপনার <style> ট্যাগের ভেতরে থাকবে */
+.perspective-1200 { perspective: 1200px; }
+.card-3d-effect { 
+    transform-style: preserve-3d; 
+    transition: all 0.5s ease; 
+}
+.card-3d-effect:hover {
+    transform: rotateY(8deg) rotateX(5deg) scale(1.02);
+    box-shadow: 0 30px 60px rgba(212, 175, 55, 0.2);
+}

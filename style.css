@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Poppins:wght@300;400;600&display=swap');
+
+/* --- ১. বেসিক সেটআপ --- */
+body { 
+    background: #030014;
+    color: #fff;
+    font-family: 'Poppins', sans-serif; 
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, .gold-gradient { font-family: 'Syne', sans-serif; }
+
+/* --- ২. গোল্ড গ্রেডিয়েন্ট ও গ্লাস কার্ড --- */
+.gold-gradient {
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.glass-card:hover {
+    border-color: rgba(191, 149, 63, 0.4);
+    transform: translateY(-5px);
+}
+
+/* --- ৩. ট্যাগ স্টাইলস --- */
+.tag-pink { 
+    display: inline-block; padding: 4px 12px; background: rgba(236, 72, 153, 0.1);
+    color: #ec4899; border-radius: 9999px; font-size: 10px; font-weight: 700; text-transform: uppercase;
+}
+.tag-white { 
+    display: inline-block; padding: 4px 12px; background: rgba(255, 255, 255, 0.1);
+    color: #fff; border-radius: 9999px; font-size: 10px; font-weight: 700; text-transform: uppercase;
+}
+
+/* --- ৪. কার্সার ও ৩ডি ইফেক্ট --- */
+#cursor { box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); mix-blend-mode: difference; }
+.perspective-1200 { perspective: 1200px; }
+.card-3d-effect { transform-style: preserve-3d; transition: all 0.5s ease; }
+
+#navbar.scrolled { 
+    background: rgba(3, 0, 20, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- ৫. কমপ্লিট রেসপন্সিভ কুয়েরি (মোবাইলের সমাধান) --- */
+@media (max-width: 768px) {
+    #home {
+        padding-top: 150px !important; /* লেখাগুলোকে নেভবারের নিচ থেকে বের করবে */
+        height: auto !important;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    h1 {
+        font-size: 2.5rem !important; /* 'FARHANA' নাম ছোট করবে যেন স্ক্রিনে ধরে */
+        line-height: 1.2 !important;
+        margin-top: 20px;
+    }
+
+    #typed {
+        font-size: 1.8rem !important; /* টাইপিং টেক্সট ছোট করবে */
+        display: inline-block;
+        margin-top: 10px;
+        min-height: 1.8rem;
+    }
+
+    h2.text-blue-400 {
+        font-size: 11px !important; /* Creative Front-End Developer লেখা ছোট হবে */
+        letter-spacing: 0.1em !important;
+    }
+
+    section {
+        padding: 4rem 1.5rem !important; /* দুই পাশের গ্যাপ ঠিক করবে */
+    }
+
+    #about img {
+        width: 180px !important; /* মোবাইলে ইমেজ ছোট করবে */
+        height: 180px !important;
+    }
+}

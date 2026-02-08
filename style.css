@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Poppins:wght@300;400;600&display=swap');
+
+/* Basic Setup */
+body { 
+    background: #030014;
+    color: #fff;
+    font-family: 'Poppins', sans-serif; 
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, .gold-gradient { font-family: 'Syne', sans-serif; }
+
+/* Gold Gradient Text */
+.gold-gradient {
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* Glass Card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.glass-card:hover {
+    border-color: rgba(191, 149, 63, 0.4);
+    transform: translateY(-5px);
+}
+
+/* Tags Fix (Tailwind @apply replacement) */
+.tag-pink { 
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(236, 72, 153, 0.1);
+    color: #ec4899;
+    border-radius: 9999px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.tag-white { 
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 9999px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Cursor Style */
+#cursor {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+    mix-blend-mode: difference;
+}
+
+/* 3D Effects */
+.perspective-1200 { perspective: 1200px; }
+.card-3d-effect {
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+/* Responsive Media Queries - এটিই আসল কাজ করবে */
+
+/* For Mobile Devices (Phones) */
+@media (max-width: 768px) {
+    /* বড় টাইটেল মোবাইলে স্ক্রিনের বাইরে যাবে না */
+    h1 {
+        font-size: 3rem !important;
+        line-height: 1.1 !important;
+    }
+    
+    h2 {
+        font-size: 2rem !important;
+    }
+
+    /* সেকশনের প্যাডিং কমিয়ে জায়গা বাড়ানো */
+    section {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        padding-top: 4rem !important;
+        padding-bottom: 4rem !important;
+    }
+
+    /* 3D ইফেক্ট মোবাইলে টাচ করলে সমস্যা করতে পারে, তাই হালকা করা */
+    .card-3d-effect:hover {
+        transform: scale(1.02);
+        box-shadow: 0 15px 30px rgba(212, 175, 55, 0.2);
+    }
+
+    /* ইমেজ এবং ভিডিও সাইজ ঠিক করা */
+    img, video {
+        height: 250px !important;
+    }
+
+    /* কার্ডের গ্যাপ কমানো */
+    .grid {
+        gap: 1rem !important;
+    }
+}
+
+/* Navbar Scrolled state */
+#navbar.scrolled { 
+    background: rgba(3, 0, 20, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+@media (max-width: 768px) {
+    /* Hero Section er padding barano */
+    #home {
+        padding-top: 120px !important; /* Navbar theke niche nambiye dibe */
+        height: auto !important; /* Mobile-e height auto thaka bhalo */
+        min-height: 100vh;
+    }
+
+    /* Typed text er size komanu */
+    #typed {
+        font-size: 2.5rem !important; /* Size komale eita ar Navbar-e jabe na */
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    /* Headline er gap thik kora */
+    h1 {
+        line-height: 1.3 !important;
+    }
+}
